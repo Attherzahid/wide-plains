@@ -1,0 +1,52 @@
+.text-gradient-light {
+  background: #acaead;
+  background: -moz-linear-gradient(90deg, #fff 0%, #999999 57%);
+  background: -webkit-linear-gradient(90deg, #fff 0%, #999999 57%);
+  background: linear-gradient(90deg, #fff 0%, #999999 57%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#acaead", endColorstr="#ffffff", GradientType=1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0,0,0,0)
+}
+.text-gradient-primary {
+  background: #acaead;
+  background: -moz-linear-gradient(0deg, #FAC26F 0%, #FCD08E 57%);
+  background: -webkit-linear-gradient(0deg, #FAC26F 0%, #FCD08E 57%);
+  background: linear-gradient(0deg, #FAC26F 0%, #FCD08E 57%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#acaead", endColorstr="#ffffff", GradientType=1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0,0,0,0)
+}
+
+.text-white {
+  color: white !important;
+}
+
+.bg-white {
+  background: white !important;
+}
+
+.text-black {
+  color: black;
+}
+
+.bg-black {
+  background: black;
+}
+
+// Primary Colors
+
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.text-primary-dark {
+  color: var(--primary-dark) !important;
+}
+
+.bg-primary-gradient {
+  background: linear-gradient(0deg, rgba(250, 192, 106, 1) 0%, rgba(255, 231, 196, 1) 100%);
+}

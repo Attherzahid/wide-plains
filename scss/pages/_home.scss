@@ -1,0 +1,171 @@
+.blured-shadow {
+    &::before {
+        content: "";
+        position: absolute;
+        width: 674px;
+        height: 346px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: #fddcaa;
+        filter: blur(240px);
+        z-index: -1;
+    }
+}
+
+.hero-sec {
+    padding: 100px 0;
+    min-height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &::before {
+        left: 38%;
+        top: 10%;
+        transform: unset;
+    }
+    > div {
+        position: relative;
+        z-index: 3;
+    }
+    .brand-card {
+        max-width: 608px;
+    }
+    .main-title {
+        font-size: clamp(36px, 5vw, 74px);
+        text-transform: capitalize;
+    }
+    .obj {
+        position: absolute;
+        z-index: -2;
+
+        &.obj-1 {
+            top: 0;
+            left: 0;
+            z-index: 1;
+            height: auto;
+        }
+        &.obj-2 {
+            top: 0;
+            left: 50%;
+            min-width: 888px;
+            height: auto;
+        }
+    }
+    #arrow {
+        animation: arrow-anim 0.8s linear infinite alternate-reverse;
+        @keyframes arrow-anim {
+            to {
+                transform: translateY(10px);
+            }
+        }
+    }
+}
+
+.cta-sec {
+    .wrapper {
+        padding: clamp(40px, 5vw, 80px) 20px;
+        border-radius: 20px;
+    }
+}
+.about-sec {
+    .img-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 400px;
+            z-index: 1;
+            background: #000000;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            right: -100px;
+            bottom: 0;
+            width: 912px;
+            height: 1095px;
+            background-image: url("./../../assets/img/about-img-bg.webp");
+            background-position: center;
+            background-size: contain;
+            z-index: -1;
+        }
+    }
+}
+.testimonial-sec {
+    .card {
+        background: linear-gradient(0deg, rgba(250, 192, 106, .7) 0%, rgba(255, 231, 196, .7) 100%);
+        border-radius: clamp(30px, 5vw, 50px);
+        padding-bottom: clamp(40px, 4vw, 50px);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .info-wrapper {
+            padding: 30px;
+            border-radius: clamp(20px, 4vw, 30px);
+            max-width: 308px;
+            .author-name {
+                color: rgba(black, .4);
+            }
+        }
+    }
+}
+.cta-sec-2 {
+    background-image: url('./../../assets/img/cta-bg.webp');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 1600px) {
+    .hero-sec {
+        padding: 60px 0;
+        .brand-card {
+            max-width: 500px;
+        }
+        .main-title {
+            font-size: clamp(36px, 5vw, 50px);
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-sec {
+        .obj {
+            position: absolute;
+            &.obj-2 {
+                left: 40%;
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .hero-sec {
+        .obj {
+            position: absolute;
+
+            &.obj-1 {
+                width: 160px;
+            }
+            &.obj-2 {
+                min-width: 800px;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 576px) {
+}
