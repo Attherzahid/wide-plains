@@ -168,4 +168,17 @@
 }
 
 @media (max-width: 576px) {
+    .hero-sec {
+        &::before {
+            display: none;
+        }
+        .obj {
+            &.obj-1 {
+                display: none;
+            }
+        }
+        .brand-card {
+            display: none;
+        }
+    }
 }
